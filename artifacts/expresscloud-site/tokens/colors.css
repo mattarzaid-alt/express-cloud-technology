@@ -1,23 +1,23 @@
-/* ExpressCloud AI colour tokens, from the brief. Contrast is checked in scripts/test. */
+/* Express Cloud colour tokens: near-white and near-black with one accent.
+   Swap --accent for the brand colour once the logo is supplied. */
 :root {
-  --ivory: #F7F4EE;
-  --ink: #16201C;
-  --green: #1F5B4B;
-  --green-deep: #174639;
-  --sand: #EFE9DE;
-  --line: #C9C1B2;
-  --muted: #3F4A45;
-  /* Input outlines need 3:1 against the ground, which the soft border colour does not reach. */
-  --line-strong: #6B736E;
+  --white: #FFFFFF;
+  --mist: #F5F5F7;
+  --black: #0B0B0C;
+  --ink: #1D1D1F;
+  --grey: #6E6E73;
+  --grey-on-dark: #A1A1A6;
+  --line: #D2D2D7;
+  --line-strong: #86868B;
+  --accent: #1259D6;
+  --accent-on-dark: #7DB0FF;
 
-  --surface-page: var(--ivory);
-  --surface-panel: var(--sand);
-  --surface-dark: var(--ink);
+  --surface-page: var(--white);
+  --surface-soft: var(--mist);
+  --surface-dark: var(--black);
   --fg-1: var(--ink);
-  --fg-2: var(--muted);
-  --fg-on-dark: var(--ivory);
-  --fg-on-dark-2: var(--line);
-  --accent: var(--green);
+  --fg-2: var(--grey);
+  --chat-ground: #F1ECE4;
   --bubble-in: #FFFFFF;
-  --bubble-out: #DCE9E2;
+  --bubble-out: #D9F5D2;
 }

@@ -2,10 +2,10 @@
 :root {
   --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px;
   --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px; --space-16: 64px;
-  --section: clamp(64px, 10vw, 128px);
-  --gutter: clamp(20px, 5vw, 48px);
-  --page-width: 1160px;
-  --radius-sm: 4px; --radius-md: 10px; --radius-lg: 18px; --radius-pill: 999px;
-  --duration-fast: 140ms;
+  --section: clamp(72px, 11vw, 144px);
+  --gutter: clamp(20px, 4vw, 40px);
+  --page-width: 1120px;
+  --radius-sm: 8px; --radius-md: 14px; --radius-lg: 28px; --radius-pill: 999px;
+  --duration-fast: 160ms; --duration-slow: 700ms;
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
 }

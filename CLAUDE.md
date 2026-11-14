@@ -1,6 +1,8 @@
-# Working on the ExpressCloud AI website
+# Working on the Express Cloud website
 
 Same shape as the Orbit website repo, hosted on Netlify.
+
+Direction: premium and minimal (large type, lots of space, black, white and one accent). The clinic AI receptionist is the featured product.
 
 - pnpm workspace; the site lives in `artifacts/expresscloud-site`.
 - Plain HTML, CSS and JavaScript, no framework. Vite is only the dev server and multi-page bundler.
@@ -8,7 +10,7 @@ Same shape as the Orbit website repo, hosted on Netlify.
 - Colours, type and spacing come from `tokens/`; pages never hard-code them.
 - Netlify builds and publishes on every push to `main` (`netlify.toml`). The demo form goes to Netlify Forms (form name `demo`).
 - Run `pnpm run verify` before shipping; it must pass.
-- Use the brief's copy as written. No prices, statistics, testimonials, client logos, awards or promised results.
+- Company home page (`index.html`) copy is a draft for the owner to approve. Clinic page (`clinic-ai-receptionist.html`) uses the brief's copy as written. No prices, statistics, testimonials, client logos, awards or promised results.
 - Never ask for patient data on this site.
 - No emoji, gradients, stock photos or robot imagery.
 - Before launch, replace `WHATSAPP_NUMBER` and `EMAIL`, and remove the `noindex` tag.
