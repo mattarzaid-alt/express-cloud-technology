@@ -12,5 +12,5 @@ Direction: premium and minimal (large type, lots of space, black, white and one 
 - Run `pnpm run verify` before shipping; it must pass.
 - Company home page (`index.html`) copy is a draft for the owner to approve. Clinic page (`clinic-ai-receptionist.html`) uses the brief's copy as written. No prices, statistics, testimonials, client logos, awards or promised results.
 - Never ask for patient data on this site.
-- No emoji, gradients, stock photos or robot imagery.
+- No emoji, stock photos or robot imagery. The only gradient is the brand violet-to-aqua, used sparingly.
 - Before launch, replace `WHATSAPP_NUMBER` and `EMAIL`, and remove the `noindex` tag.

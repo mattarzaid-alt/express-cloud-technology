@@ -4,6 +4,8 @@
 @import "@fontsource/inter/latin-500.css";
 @import "@fontsource/inter/latin-600.css";
 @import "@fontsource/inter/latin-700.css";
+/* Montserrat bold italic is used only for the ExpressCloud wordmark. */
+@import "@fontsource/montserrat/latin-700-italic.css";
 @import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
 @import "@fontsource/ibm-plex-sans-arabic/arabic-500.css";
 @import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";

@@ -55,7 +55,9 @@
 }
 .header__row { display: flex; align-items: center; gap: var(--space-4); min-height: 56px; }
 .logo { display: inline-flex; align-items: center; gap: var(--space-2); text-decoration: none; margin-inline-end: auto; }
-.logo img { display: block; height: 30px; width: auto; mix-blend-mode: multiply; }
+.logo img { display: block; height: 30px; width: auto; }
+.logo__word { font-family: "Montserrat", var(--font-sans); font-style: italic; font-weight: 700; font-size: 1.3125rem; letter-spacing: -0.02em; color: var(--indigo); line-height: 1; }
+.dark .logo__word { color: var(--white); }
 .logo__tag { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 6px; background: var(--indigo); color: var(--white); }
 .grad { background: linear-gradient(90deg, var(--violet), #2A86D6); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .dark .grad { background-image: linear-gradient(90deg, #A994FF, var(--aqua)); }
@@ -107,6 +109,19 @@
 .dark .card__n { color: var(--accent-on-dark); }
 .section:not(.soft):not(.dark) .card { background: var(--surface-soft); }
 
+/* ---------- Leadership ---------- */
+.person { display: grid; gap: var(--space-10); }
+.person .stack { display: grid; gap: var(--space-5); align-content: start; }
+.person__name { font-size: var(--text-h2); font-weight: 600; line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); }
+.person__role { font-size: var(--text-lg); color: var(--accent); font-weight: 500; }
+.person p { color: var(--fg-2); max-width: 36em; }
+.facts { display: grid; gap: var(--space-5); align-content: start; }
+.facts > div { background: var(--white); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); display: grid; gap: var(--space-3); }
+.facts h3 { font-size: var(--text-sm); color: var(--fg-2); font-weight: 600; letter-spacing: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0; margin: 0; list-style: none; }
+.chips li { font-size: var(--text-sm); font-weight: 500; padding: 6px 14px; border-radius: var(--radius-pill); background: var(--surface-soft); }
+@media (min-width: 900px) { .person { grid-template-columns: 1.1fr 0.9fr; gap: var(--space-16); } }
+
 /* ---------- Statement (about) ---------- */
 .statement { font-size: clamp(1.625rem, 1rem + 2.6vw, 2.75rem); font-weight: 600; line-height: 1.15; letter-spacing: var(--tracking-tight); max-width: 20em; text-wrap: balance; }
 .statement span { color: var(--fg-2); }
@@ -128,6 +143,7 @@
 .field input[type="tel"] { direction: ltr; text-align: start; }
 .form__trap { position: absolute; inset-inline-start: -9999px; }
 .form__error { color: #B3261E; font-size: var(--text-sm); font-weight: 500; }
+.section:not(.soft) :is(.form, .thanks) { background: var(--surface-soft); }
 .thanks { background: var(--white); border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 48px); display: grid; gap: var(--space-3); }
 .thanks p { color: var(--fg-2); }
 

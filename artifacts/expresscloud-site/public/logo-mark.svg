@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 68" role="img" aria-label="ExpressCloud">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A43F5"/>
+      <stop offset="1" stop-color="#4A1FD1"/>
+    </linearGradient>
+    <linearGradient id="cloud" gradientUnits="userSpaceOnUse" x1="26" y1="34" x2="84" y2="34">
+      <stop offset="0" stop-color="#5CF5E0"/>
+      <stop offset="0.45" stop-color="#56CFE6"/>
+      <stop offset="0.78" stop-color="#5A86EC"/>
+      <stop offset="1" stop-color="#5B3FE8"/>
+    </linearGradient>
+  </defs>
+  <rect x="13" y="10" width="42" height="48" rx="10" fill="url(#tile)" transform="translate(34 34) skewX(-9) translate(-34 -34)"/>
+  <g fill="url(#cloud)">
+    <circle cx="37" cy="34" r="11.5"/>
+    <circle cx="54" cy="30" r="13.5"/>
+    <circle cx="72" cy="34" r="10.5"/>
+    <circle cx="54" cy="40.5" r="11"/>
+    <rect x="37" y="28" width="35" height="16.5"/>
+  </g>
+</svg>
