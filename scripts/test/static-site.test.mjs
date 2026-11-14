@@ -20,6 +20,12 @@ for (const page of pages) {
     assert.match(html, /<meta name="description" content="[^"]+">/);
   });
 
+  test(`${page} has a sharing image that exists`, () => {
+    const image = html.match(/<meta property="og:image" content="https?:\/\/[^/]+(\/[^"]+)">/);
+    assert.ok(image, `${page} has no og:image`);
+    assert.ok(fs.existsSync(path.join(dist, image[1])), `${page} og:image ${image[1]} is missing`);
+  });
+
   test(`${page} has no broken local links`, () => {
     for (const [, url] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
       if (/^(?:[a-z]+:|\/\/|#)/i.test(url)) continue;
