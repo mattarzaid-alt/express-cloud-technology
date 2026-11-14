@@ -68,3 +68,12 @@ if (menuButton && nav) {
   nav.addEventListener('click', (event) => { if (event.target.closest('a')) setOpen(false); });
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setOpen(false); });
 }
+
+// Language switch: land on the same section in the other language.
+for (const link of document.querySelectorAll('[data-lang-switch]')) {
+  link.addEventListener('click', () => {
+    const middle = window.innerHeight / 2;
+    const current = [...document.querySelectorAll('main section[id]')].filter((section) => section.getBoundingClientRect().top <= middle).pop();
+    if (current && current.id !== 'top') link.hash = current.id;
+  });
+}

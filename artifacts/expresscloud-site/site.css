@@ -212,3 +212,31 @@ blockquote { margin: 0; }
 }
 .logo { flex-shrink: 0; }
 @media (max-width: 359px) { .header .btn--small { display: none; } }
+
+/* ---------- Language switch ---------- */
+.lang { font-size: var(--text-sm); font-weight: 500; text-decoration: none; color: var(--ink); padding: var(--space-2); }
+.lang:hover { text-decoration: underline; text-underline-offset: 4px; }
+.lang:lang(ar) { font-family: "IBM Plex Sans Arabic", var(--font-sans); font-size: 1rem; }
+.nav__cta { display: none; }
+@media (max-width: 819px) { .nav.is-open .nav__cta { display: block; color: var(--accent); } }
+/* Product pages on phones: the language switch takes the header button's place; the hero button is right below. */
+@media (max-width: 479px) { .product .header__cta { display: none; } }
+@media (max-width: 359px) { .product .logo__tag { display: none; } }
+
+/* ---------- Product hero ---------- */
+.hero__split { align-items: center; }
+.hero__title { font-size: clamp(2.5rem, 1.4rem + 4.6vw, 4.5rem); }
+
+/* ---------- FAQ ---------- */
+.faq { margin: 0; display: grid; gap: 0; border-block-start: 1px solid var(--line); }
+.faq > div { display: grid; gap: var(--space-3); padding-block: var(--space-8); border-block-end: 1px solid var(--line); }
+.faq dt { font-size: var(--text-h3); font-weight: 600; line-height: var(--leading-snug); letter-spacing: var(--tracking-snug); }
+.faq dd { margin: 0; color: var(--fg-2); font-size: var(--text-lg); line-height: 1.5; max-width: 40em; }
+@media (min-width: 900px) { .faq > div { grid-template-columns: 1fr 1.2fr; gap: var(--space-12); } }
+
+/* ---------- Arabic pages ---------- */
+html[lang="ar"] body { letter-spacing: 0; }
+html[lang="ar"] :is(h1, h2) { font-weight: 600; }
+html[lang="ar"] .hero__title { font-size: clamp(2.25rem, 1.3rem + 4vw, 4rem); }
+[dir="rtl"] .field input[type="tel"] { text-align: right; }
+.thanks h3 { font-size: var(--text-h3); }

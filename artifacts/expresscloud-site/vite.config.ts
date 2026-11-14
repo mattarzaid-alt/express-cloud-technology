@@ -30,10 +30,13 @@ if (!basePath) throw new Error('BASE_PATH environment variable is required.');
 
 // Plain static site: Vite is only the file server and multi-page bundler.
 // Every .html file in this folder is a page; adding a page needs no config.
+// Arabic pages live in ar/ under the same file names.
 const pages = Object.fromEntries(
-  fs.readdirSync(root)
-    .filter((file) => file.endsWith('.html'))
-    .map((file) => [file.replace(/\.html$/, ''), path.resolve(root, file)]),
+  ['', 'ar'].flatMap((folder) =>
+    fs.readdirSync(path.join(root, folder))
+      .filter((file) => file.endsWith('.html'))
+      .map((file) => [path.join(folder, file).replace(/\.html$/, ''), path.resolve(root, folder, file)]),
+  ),
 );
 
 export default defineConfig({
