@@ -1,0 +1,11 @@
+/* ExpressCloud AI colour tokens. Placeholder neutrals until the brief sets the brand. */
+:root {
+  --brand: #2f5bea;
+  --brand-tint: #e8eeff;
+  --fg-1: #141a24;
+  --fg-2: #515b6b;
+  --fg-link: var(--brand);
+  --surface-page: #ffffff;
+  --surface-raised: #f6f8fb;
+  --border: #e2e7ee;
+}

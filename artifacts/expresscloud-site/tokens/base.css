@@ -1,0 +1,16 @@
+/* Minimal base element styles. */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--fg-1);
+  background: var(--surface-page);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--fg-link); text-decoration: none; transition: color var(--duration-fast) var(--ease-out); }
+a:hover { text-decoration: underline; }
+h1, h2, h3, h4 { font-weight: var(--weight-semibold); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); margin: 0; }
+img { max-width: 100%; height: auto; }
+::selection { background: var(--brand-tint); }

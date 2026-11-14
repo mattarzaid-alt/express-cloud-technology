@@ -1,0 +1,9 @@
+@import "./tokens/colors.css";
+@import "./tokens/spacing.css";
+@import "./tokens/typography.css";
+@import "./tokens/base.css";
+
+.wrap { width: min(100% - 2 * var(--space-5), var(--page-width)); margin-inline: auto; }
+.hero { padding-block: var(--space-20); }
+.hero h1 { font-size: var(--text-3xl); }
+.hero p { color: var(--fg-2); font-size: var(--text-lg); max-width: 60ch; }

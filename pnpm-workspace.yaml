@@ -1,0 +1,15 @@
+# Packages must be at least 1 day old before pnpm installs them
+# (defence against supply-chain attacks). Do not disable.
+minimumReleaseAge: 1440
+
+packages:
+  - artifacts/*
+
+catalog:
+  '@types/node': ^25.3.3
+  vite: ^7.3.2
+
+autoInstallPeers: false
+
+onlyBuiltDependencies:
+  - esbuild

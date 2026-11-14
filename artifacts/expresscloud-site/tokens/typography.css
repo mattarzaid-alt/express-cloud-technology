@@ -1,0 +1,9 @@
+/* Typography tokens. System fonts until the brief sets the brand font (then self-host via Fontsource). */
+:root {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-sm: 0.875rem; --text-base: 1rem; --text-lg: 1.125rem; --text-xl: 1.5rem;
+  --text-2xl: 2rem; --text-3xl: clamp(2.25rem, 5vw, 3.5rem);
+  --leading-tight: 1.15; --leading-normal: 1.6;
+  --weight-regular: 400; --weight-medium: 500; --weight-semibold: 600;
+  --tracking-tight: -0.02em;
+}
