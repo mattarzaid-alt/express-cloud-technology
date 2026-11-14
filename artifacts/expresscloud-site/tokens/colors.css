@@ -1,11 +1,23 @@
-/* ExpressCloud AI colour tokens. Placeholder neutrals until the brief sets the brand. */
+/* ExpressCloud AI colour tokens, from the brief. Contrast is checked in scripts/test. */
 :root {
-  --brand: #2f5bea;
-  --brand-tint: #e8eeff;
-  --fg-1: #141a24;
-  --fg-2: #515b6b;
-  --fg-link: var(--brand);
-  --surface-page: #ffffff;
-  --surface-raised: #f6f8fb;
-  --border: #e2e7ee;
+  --ivory: #F7F4EE;
+  --ink: #16201C;
+  --green: #1F5B4B;
+  --green-deep: #174639;
+  --sand: #EFE9DE;
+  --line: #C9C1B2;
+  --muted: #3F4A45;
+  /* Input outlines need 3:1 against the ground, which the soft border colour does not reach. */
+  --line-strong: #6B736E;
+
+  --surface-page: var(--ivory);
+  --surface-panel: var(--sand);
+  --surface-dark: var(--ink);
+  --fg-1: var(--ink);
+  --fg-2: var(--muted);
+  --fg-on-dark: var(--ivory);
+  --fg-on-dark-2: var(--line);
+  --accent: var(--green);
+  --bubble-in: #FFFFFF;
+  --bubble-out: #DCE9E2;
 }

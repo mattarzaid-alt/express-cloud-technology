@@ -1,18 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ExpressCloud AI</title>
-<meta name="description" content="ExpressCloud AI. Site in progress.">
+<title>ExpressCloud AI - A WhatsApp AI receptionist for private clinics in Doha</title>
+<meta name="description" content="An AI receptionist that replies to patients in Gulf Arabic and English, books appointments into your calendar, and hands anything medical to your team.">
+<!-- Hidden from search until the copy is complete and the domain is decided. -->
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F4EE">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
-<main class="wrap hero">
-  <h1>ExpressCloud AI</h1>
-  <p>Scaffold only. Pages are built from the website brief.</p>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="wrap header__row">
+    <a class="logo" href="#top" aria-label="ExpressCloud AI">ExpressCloud <span class="logo__tag">AI</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#safety">Safety</a>
+      <a href="#questions">Questions</a>
+    </nav>
+    <!-- LANGUAGE SWITCH: added with the Arabic page (ar/index.html) once the Arabic copy arrives. -->
+    <a class="btn btn--small" href="#demo">Book a demo</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow">For private clinics in Doha</p>
+        <h1>Your clinic's WhatsApp, answered at every hour.</h1>
+        <p class="hero__sub">An AI receptionist that replies to patients in Gulf Arabic and English, books appointments into your calendar, and hands anything medical to your team.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#demo">Book a demo</a>
+          <a class="btn btn--ghost" href="#how">See how it works</a>
+        </div>
+      </div>
+      <figure class="chat">
+        <figcaption class="chat__label">Example conversation</figcaption>
+        <ol class="chat__window" lang="ar" dir="rtl">
+          <li class="msg msg--in"><span class="msg__who">المراجع: </span>السلام عليكم، أبي أحجز تنظيف أسنان باجر العصر</li>
+          <li class="msg msg--out"><span class="msg__who">العيادة: </span>حياكم الله. باجر الاثنين عندنا مع الدكتورة 4:00 أو 4:30 العصر. أي وقت يناسبكم؟</li>
+          <li class="msg msg--in"><span class="msg__who">المراجع: </span>4:30 زين</li>
+          <li class="msg msg--out"><span class="msg__who">العيادة: </span>تم الحجز. نشوفكم على خير، وبنرسل لكم تذكير قبل الموعد بيوم.</li>
+        </ol>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section band" id="problem">
+    <div class="wrap">
+      <h2>Patients message when they think of it. Not when reception is free.</h2>
+      <ul class="points">
+        <li><h3>Messages after hours</h3><p>Evenings, weekends and Fridays are when people plan their week, and when nobody is there to reply.</p></li>
+        <li><h3>The same questions, all day</h3><p>Prices, location, parking, which doctor. Each one takes your receptionist away from the patient in front of them.</p></li>
+        <li><h3>Slow replies lose bookings</h3><p>Someone comparing clinics books with whoever answers first.</p></li>
+        <li><h3>Missed appointments</h3><p>Without a reminder the day before, empty chairs cost you time you can't get back.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <h2>Live in two weeks. On the WhatsApp number your patients already use.</h2>
+      <ol class="steps">
+        <li><span class="steps__n" aria-hidden="true">01</span><h3>We learn your clinic</h3><p>Your services, prices, doctors, hours and policies go into one sheet. The assistant answers only from it.</p></li>
+        <li><span class="steps__n" aria-hidden="true">02</span><h3>We connect your calendar</h3><p>It books into your schedule and follows your rules: doctors' days, notice periods, cancellations.</p></li>
+        <li><span class="steps__n" aria-hidden="true">03</span><h3>We watch it with you</h3><p>For the first weeks we review conversations daily and tune it, then send you a weekly report.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PENDING COPY: "What it does" (four cards) goes here. -->
+  <!-- PENDING COPY: "Safety" (four rules), id="safety", goes here. -->
+  <!-- PENDING COPY: "FAQ" (four questions), id="questions", goes here. -->
+
+  <section class="section demo" id="demo">
+    <div class="wrap demo__grid">
+      <div class="demo__intro">
+        <!-- PENDING COPY: the brief's headline and text for this section replace the two lines below. -->
+        <h2>Book a demo</h2>
+        <p></p>
+        <a class="btn btn--ghost" href="https://wa.me/WHATSAPP_NUMBER">Message us on WhatsApp</a>
+      </div>
+      <div>
+        <form class="form" name="demo" method="POST" data-netlify="true" netlify-honeypot="website" data-demo-form>
+          <input type="hidden" name="form-name" value="demo">
+          <input type="hidden" name="language" value="English">
+          <p class="form__trap" aria-hidden="true"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-clinic">Clinic name</label>
+            <input id="f-clinic" name="clinic" type="text" autocomplete="organization" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Mobile or WhatsApp</label>
+            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" value="+974 " pattern="\+?[0-9 ]{8,}" required>
+          </div>
+          <div class="field">
+            <label for="f-type">Type of clinic</label>
+            <select id="f-type" name="clinic-type" required>
+              <option value="" selected disabled hidden></option>
+              <option>Dental</option>
+              <option>Aesthetic or dermatology</option>
+              <option>Physiotherapy</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Book a demo</button>
+          <p class="form__error" role="alert" hidden data-demo-error>That did not send. Please try again, or message us on WhatsApp.</p>
+        </form>
+        <div class="thanks" role="status" tabindex="-1" hidden data-demo-thanks>
+          <!-- INTERIM COPY: replace with the brief's thank-you message if it has one. -->
+          <h3>Thank you.</h3>
+          <p>We have your details and will message you to arrange your demo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <div class="wrap footer__row">
+    <span class="footer__name">ExpressCloud AI</span>
+    <span>Doha, Qatar</span>
+    <a href="mailto:EMAIL">EMAIL</a>
+  </div>
+</footer>
+
 <script type="module" src="site.js"></script>
 </body>
 </html>
