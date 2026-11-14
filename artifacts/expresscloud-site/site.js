@@ -39,3 +39,32 @@ if ('IntersectionObserver' in window) {
 } else {
   revealed.forEach((element) => element.classList.add('is-in'));
 }
+
+// The example conversation plays one message at a time, like a chat arriving.
+for (const chat of document.querySelectorAll('[data-chat]')) {
+  const messages = [...chat.querySelectorAll('.msg')];
+  const play = () => messages.forEach((message, index) => setTimeout(() => message.classList.add('is-in'), 350 + index * 1100));
+  if ('IntersectionObserver' in window) {
+    const chatObserver = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      chatObserver.disconnect();
+      play();
+    }, { threshold: 0.4 });
+    chatObserver.observe(chat);
+  } else {
+    messages.forEach((message) => message.classList.add('is-in'));
+  }
+}
+
+// Phone menu: the section links open under the header.
+const menuButton = document.querySelector('[data-menu]');
+const nav = document.getElementById('nav');
+if (menuButton && nav) {
+  const setOpen = (open) => {
+    nav.classList.toggle('is-open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+  };
+  menuButton.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+  nav.addEventListener('click', (event) => { if (event.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setOpen(false); });
+}

@@ -13,4 +13,5 @@ Direction: premium and minimal (large type, lots of space, black, white and one 
 - Company home page (`index.html`): hero, Who we are, sectors, approach, opportunity and the quote are the old company website's own wording. Leadership is adapted from the CEO's LinkedIn profile.
 - Never ask for patient data on this site.
 - No emoji, stock photos or robot imagery. The only gradient is the brand violet-to-aqua, used sparingly.
-- Before launch, replace `WHATSAPP_NUMBER` and `EMAIL`, and remove the `noindex` tag.
+- The public address is set in page meta tags, `public/sitemap.xml` and `public/robots.txt` (currently the Netlify address); update all of them when the domain changes.
+- Before launch, replace `WHATSAPP_NUMBER` and `EMAIL`, remove the `noindex` tag from each page, and allow crawling in `public/robots.txt`.

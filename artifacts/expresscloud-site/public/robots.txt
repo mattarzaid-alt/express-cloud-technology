@@ -1,2 +1,6 @@
+# Blocked until the copy is approved. At launch: change "Disallow: /" to "Allow: /"
+# and remove the noindex tag from each page.
 User-agent: *
 Disallow: /
+
+Sitemap: https://expresscloudtech.netlify.app/sitemap.xml

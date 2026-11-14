@@ -1,0 +1,17 @@
+# Express Cloud Technology
+
+> Express Cloud Technology identifies, funds, and grows the most promising tech ventures across Qatar and the broader emerging market landscape.
+
+## Key facts
+
+- What it is: Qatar's technology investment partner, founded in Doha in 2013.
+- Sectors: fintech, mobility, proptech and digital commerce.
+- Approach: a technology-first lens, Qatar-rooted and region-ready, and active partnership with founders.
+- Product: Clinic AI Receptionist, a WhatsApp AI receptionist for private clinics in Doha. It replies to patients in Gulf Arabic and English, books appointments into the clinic's calendar, and hands anything medical to the clinic's team.
+- Leadership: Ebrahim Mattar, Chief Executive Officer.
+- Based in: Doha, Qatar.
+
+## Pages
+
+- Home: /
+- Clinic AI Receptionist: /clinic-ai-receptionist

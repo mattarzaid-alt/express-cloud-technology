@@ -62,6 +62,17 @@
 .grad { background: linear-gradient(90deg, var(--violet), #2A86D6); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .dark .grad { background-image: linear-gradient(90deg, #A994FF, var(--aqua)); }
 .nav { display: none; gap: var(--space-8); font-size: var(--text-sm); margin-inline-end: var(--space-4); }
+.menu { display: inline-grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--ink); cursor: pointer; }
+.menu:hover { background: var(--surface-soft); }
+@media (max-width: 819px) {
+  .nav.is-open {
+    display: grid; gap: 0; position: absolute; inset-inline: 0; top: 100%; margin: 0; padding: var(--space-2) var(--gutter) var(--space-5);
+    background: var(--white); border-block-end: 1px solid var(--line); box-shadow: 0 24px 40px -24px rgba(13, 10, 31, 0.25);
+  }
+  .nav.is-open a { font-size: 1.25rem; font-weight: 600; letter-spacing: var(--tracking-snug); opacity: 1; padding-block: var(--space-4); border-block-end: 1px solid var(--surface-soft); }
+  .nav.is-open a:last-child { border: 0; }
+}
+@media (min-width: 820px) { .menu { display: none; } }
 .nav a { text-decoration: none; color: var(--ink); opacity: 0.8; padding-block: var(--space-2); }
 .nav a:hover { opacity: 1; }
 @media (min-width: 820px) { .nav { display: flex; } }
@@ -72,6 +83,19 @@
 .hero h1 { max-width: 11em; }
 .hero .actions { margin-block-start: var(--space-4); }
 @media (max-width: 479px) { .hero .actions .btn { flex: 1 1 100%; } }
+
+/* A slow violet and aqua glow behind the hero. Decorative only. */
+.hero--glow { position: relative; isolation: isolate; overflow: hidden; }
+.hero--glow::before, .hero--glow::after {
+  content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(90px); opacity: 0.22; pointer-events: none;
+}
+.hero--glow::before { width: min(60vw, 640px); aspect-ratio: 1; background: var(--violet); top: -18%; inset-inline-start: 8%; }
+.hero--glow::after { width: min(52vw, 560px); aspect-ratio: 1; background: var(--aqua); top: 6%; inset-inline-end: 6%; opacity: 0.26; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero--glow::before { animation: drift 18s ease-in-out infinite alternate; }
+  .hero--glow::after { animation: drift 22s ease-in-out infinite alternate-reverse; }
+}
+@keyframes drift { from { transform: translate3d(-4%, -3%, 0) scale(1); } to { transform: translate3d(6%, 5%, 0) scale(1.12); } }
 
 /* ---------- Feature tile (the product) ---------- */
 .feature { padding-block: 0 var(--section); }
@@ -120,7 +144,6 @@
 .ticks li { position: relative; padding-inline-start: var(--space-8); color: var(--fg-1); }
 .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: 0.5em; width: 14px; height: 14px; border-radius: 4px; background: linear-gradient(135deg, var(--violet), var(--aqua)); }
 blockquote { margin: 0; }
-.nav { gap: var(--space-6); }
 
 /* ---------- Leadership ---------- */
 .person { display: grid; gap: var(--space-10); }
@@ -166,8 +189,26 @@ blockquote { margin: 0; }
 .footer a { text-decoration: none; }
 .footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+/* ---------- Chat plays message by message when it scrolls into view ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-chat] .msg { opacity: 0; transform: translateY(10px) scale(0.96); transform-origin: 100% 100%; transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out); }
+  .js [data-chat] .msg--out { transform-origin: 0 100%; }
+  .js [data-chat] .msg.is-in { opacity: 1; transform: none; }
+}
+
 /* ---------- Scroll reveal (only when JavaScript and motion are available) ---------- */
 @media (prefers-reduced-motion: no-preference) {
   .js [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity var(--duration-slow) var(--ease-out), transform var(--duration-slow) var(--ease-out); }
   .js [data-reveal].is-in { opacity: 1; transform: none; }
 }
+
+/* ---------- Narrow phones: keep logo, menu and button on one line ---------- */
+@media (max-width: 479px) {
+  .header__row { gap: var(--space-2); }
+  .logo { gap: 6px; }
+  .logo img { height: 26px; }
+  .logo__word { font-size: 1.0625rem; }
+  .header .btn--small { padding: 0 14px; }
+}
+.logo { flex-shrink: 0; }
+@media (max-width: 359px) { .header .btn--small { display: none; } }
