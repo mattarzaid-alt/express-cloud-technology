@@ -1,0 +1,32 @@
+/* Typography tokens. Apple devices use their system face; everything else gets Inter,
+   self-hosted (Fontsource) so text never waits on a third party. */
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-700.css";
+/* Montserrat bold italic is used only for the ExpressCloud wordmark. */
+@import "@fontsource/montserrat/latin-700-italic.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-500.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";
+
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans Arabic", "Segoe UI", system-ui, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.1875rem, 1rem + 0.7vw, 1.5rem);
+  --text-h3: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem);
+  --text-h2: clamp(2rem, 1.2rem + 3.6vw, 3.5rem);
+  --text-h1: clamp(2.75rem, 1.2rem + 6.6vw, 5.5rem);
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;
+  --tracking-tight: -0.03em;
+  --tracking-snug: -0.015em;
+}
+:lang(ar) {
+  --font-sans: "IBM Plex Sans Arabic", -apple-system, "Inter", system-ui, sans-serif;
+  --leading-tight: 1.4; --leading-snug: 1.5; --leading-normal: 1.85;
+  --tracking-tight: 0; --tracking-snug: 0;
+}
