@@ -1,16 +1,18 @@
-/* Express Cloud colour tokens: near-white and near-black with one accent.
-   Swap --accent for the brand colour once the logo is supplied. */
+/* Express Cloud colour tokens: near-white, a deep indigo-black, and the logo's violet and aqua. */
 :root {
   --white: #FFFFFF;
   --mist: #F5F5F7;
-  --black: #0B0B0C;
+  --black: #0D0A1F;
   --ink: #1D1D1F;
   --grey: #6E6E73;
   --grey-on-dark: #A1A1A6;
   --line: #D2D2D7;
   --line-strong: #86868B;
-  --accent: #1259D6;
-  --accent-on-dark: #7DB0FF;
+  --accent: #4F2DD1;
+  --indigo: #3A2A85;
+  --violet: #5C2DE0;
+  --aqua: #5CF5E0;
+  --accent-on-dark: #5CF5E0;
 
   --surface-page: var(--white);
   --surface-soft: var(--mist);
