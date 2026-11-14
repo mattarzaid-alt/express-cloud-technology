@@ -109,6 +109,13 @@
 .dark .card__n { color: var(--accent-on-dark); }
 .section:not(.soft):not(.dark) .card { background: var(--surface-soft); }
 
+/* ---------- Who we are ---------- */
+.about { display: grid; gap: var(--space-8); }
+.about .head { margin-block-end: 0; }
+.prose { display: grid; gap: var(--space-5); font-size: var(--text-lg); line-height: 1.5; letter-spacing: var(--tracking-snug); color: var(--fg-2); max-width: 36em; }
+.prose p:first-child { color: var(--fg-1); }
+@media (min-width: 900px) { .about { grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start; } }
+
 /* ---------- Leadership ---------- */
 .person { display: grid; gap: var(--space-10); }
 .person .stack { display: grid; gap: var(--space-5); align-content: start; }
@@ -116,15 +123,15 @@
 .person__role { font-size: var(--text-lg); color: var(--accent); font-weight: 500; }
 .person p { color: var(--fg-2); max-width: 36em; }
 .facts { display: grid; gap: var(--space-5); align-content: start; }
-.facts > div { background: var(--white); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); display: grid; gap: var(--space-3); }
+.facts > div { background: var(--surface-soft); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); display: grid; gap: var(--space-3); }
 .facts h3 { font-size: var(--text-sm); color: var(--fg-2); font-weight: 600; letter-spacing: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0; margin: 0; list-style: none; }
-.chips li { font-size: var(--text-sm); font-weight: 500; padding: 6px 14px; border-radius: var(--radius-pill); background: var(--surface-soft); }
+.chips li { font-size: var(--text-sm); font-weight: 500; padding: 6px 14px; border-radius: var(--radius-pill); background: var(--white); }
 @media (min-width: 900px) { .person { grid-template-columns: 1.1fr 0.9fr; gap: var(--space-16); } }
 
 /* ---------- Statement (about) ---------- */
 .statement { font-size: clamp(1.625rem, 1rem + 2.6vw, 2.75rem); font-weight: 600; line-height: 1.15; letter-spacing: var(--tracking-tight); max-width: 20em; text-wrap: balance; }
-.statement span { color: var(--fg-2); }
+.statement span:not(.grad) { color: var(--fg-2); }
 
 /* ---------- Contact and forms ---------- */
 .split { display: grid; gap: var(--space-12); }
@@ -143,7 +150,6 @@
 .field input[type="tel"] { direction: ltr; text-align: start; }
 .form__trap { position: absolute; inset-inline-start: -9999px; }
 .form__error { color: #B3261E; font-size: var(--text-sm); font-weight: 500; }
-.section:not(.soft) :is(.form, .thanks) { background: var(--surface-soft); }
 .thanks { background: var(--white); border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 48px); display: grid; gap: var(--space-3); }
 .thanks p { color: var(--fg-2); }
 
