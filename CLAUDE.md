@@ -10,7 +10,7 @@ Direction: premium and minimal (large type, lots of space, black, white and one 
 - Colours, type and spacing come from `tokens/`; pages never hard-code them.
 - Netlify builds and publishes on every push to `main` (`netlify.toml`). The demo form goes to Netlify Forms (form name `demo`).
 - Run `pnpm run verify` before shipping; it must pass.
-- Company home page (`index.html`): hero, "Who we are" and the closing line are the old company website's own wording; focus areas and operating experience are drafts for the owner to approve. Clinic page (`clinic-ai-receptionist.html`) uses the brief's copy as written. No prices, statistics, testimonials, client logos, awards or promised results.
+- Company home page (`index.html`): hero, Who we are, sectors, approach, opportunity and the quote are the old company website's own wording. Leadership is adapted from the CEO's LinkedIn profile.
 - Never ask for patient data on this site.
 - No emoji, stock photos or robot imagery. The only gradient is the brand violet-to-aqua, used sparingly.
 - Before launch, replace `WHATSAPP_NUMBER` and `EMAIL`, and remove the `noindex` tag.

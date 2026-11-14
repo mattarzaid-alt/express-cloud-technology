@@ -116,6 +116,12 @@
 .prose p:first-child { color: var(--fg-1); }
 @media (min-width: 900px) { .about { grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start; } }
 
+.ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-4); font-size: var(--text-base); letter-spacing: -0.01em; }
+.ticks li { position: relative; padding-inline-start: var(--space-8); color: var(--fg-1); }
+.ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: 0.5em; width: 14px; height: 14px; border-radius: 4px; background: linear-gradient(135deg, var(--violet), var(--aqua)); }
+blockquote { margin: 0; }
+.nav { gap: var(--space-6); }
+
 /* ---------- Leadership ---------- */
 .person { display: grid; gap: var(--space-10); }
 .person .stack { display: grid; gap: var(--space-5); align-content: start; }
