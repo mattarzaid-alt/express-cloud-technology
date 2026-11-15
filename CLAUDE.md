@@ -14,5 +14,6 @@ Direction: premium and minimal (large type, lots of space, black, white and one 
 - Never ask for patient data on this site.
 - No emoji, stock photos or robot imagery. The only gradient is the brand violet-to-aqua, used sparingly.
 - The public address is set in page meta tags, `public/sitemap.xml` and `public/robots.txt` (currently the Netlify address); update all of them when the domain changes.
+- The home page also has an Arabic version (`ar/index.html`), translated from the English; change both together.
 - The clinic page exists in English (`clinic-ai-receptionist.html`) and Arabic (`ar/clinic-ai-receptionist.html`, right-to-left). Both use the brief's copy as written; change them together. A native Gulf Arabic speaker reviews the Arabic before launch.
 - Before launch, replace `EMAIL`, confirm the WhatsApp number, remove the `noindex` tag from each page, and allow crawling in `public/robots.txt`.
