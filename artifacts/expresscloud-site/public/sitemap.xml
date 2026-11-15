@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://expresscloudtech.netlify.app/</loc></url>
+  <url><loc>https://expresscloudtech.netlify.app/ar/</loc></url>
   <url><loc>https://expresscloudtech.netlify.app/clinic-ai-receptionist</loc></url>
+  <url><loc>https://expresscloudtech.netlify.app/ar/clinic-ai-receptionist</loc></url>
 </urlset>

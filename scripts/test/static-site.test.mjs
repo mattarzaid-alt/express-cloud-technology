@@ -6,7 +6,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const dist = path.resolve(import.meta.dirname, '../../artifacts/expresscloud-site/dist/public');
-const pages = fs.existsSync(dist) ? fs.readdirSync(dist).filter((f) => f.endsWith('.html')) : [];
+const htmlIn = (folder) => (fs.existsSync(path.join(dist, folder)) ? fs.readdirSync(path.join(dist, folder)) : [])
+  .filter((f) => f.endsWith('.html')).map((f) => path.join(folder, f));
+const pages = [...htmlIn(''), ...htmlIn('ar')];
 
 test('the site was built', () => {
   assert.ok(pages.includes('index.html'), 'run `pnpm run build` first');
@@ -24,6 +26,10 @@ for (const page of pages) {
     const image = html.match(/<meta property="og:image" content="https?:\/\/[^/]+(\/[^"]+)">/);
     assert.ok(image, `${page} has no og:image`);
     assert.ok(fs.existsSync(path.join(dist, image[1])), `${page} og:image ${image[1]} is missing`);
+  });
+
+  test(`${page} has no unfilled WhatsApp placeholder`, () => {
+    assert.doesNotMatch(html, /WHATSAPP_NUMBER/);
   });
 
   test(`${page} has no broken local links`, () => {
